@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+
+  background-color: rgb(121, 220, 225);
+  gap: 25px; /*Add space between rows */
+  border: 35px solid rgb(121, 220, 225);
+  width: 50vh;
+  height: 70vh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Add space between boxes */
+}
+
+.row:first-child .box {
+  flex: 0.5 0 0;
+  min-height: 120px;
+}
+
+.box {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align the content from the top */
+  flex: 1;
+  overflow: auto;
+}
+
+/* 2nd row */
+.row:nth-child(2) {
+  gap: 40px; /* Adjust the gap value for the second row */
+}
+
+.row:nth-child(2) .box {
+  flex: 2 1 0;
+  min-height: 85px;
+}
+
+/* 3rd row */
+.row:nth-child(3) {
+  gap: 35px;
+}
+
+.row:nth-child(3) .box:first-child {
+  flex: 0.7 0 0; /* Flex-grow: 0.7, Flex-shrink: 0, Flex-basis: 0 */
+  min-height: 175px;
+}
+
+.row:nth-child(3) .box:last-child {
+  flex: 0.3 0 auto;
+  align-self: flex-end;
+  min-height: 165px;
+}
+
+/* 4th row */
+.row:nth-child(4) {
+  gap: 25px;
+  justify-content: space-around;
+}
+
+.row:nth-child(4) .box:first-child {
+  flex: 1 0 0; /* Add flex properties for the boxes in the 4th row */
+  min-height: 100px; /* Set an appropriate min-height for the boxes in the 4th row */
+  background-color: rgb(121, 220, 225);
+  border: 10px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row:nth-child(4) .box:last-child {
+  flex: 1 0 0; /* Add flex properties for the boxes in the 4th row */
+  min-height: 100px; /* Set an appropriate min-height for the boxes in the 4th row */
+  background-color: rgb(121, 220, 225);
+  border: 10px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.inner-box1 {
+  display: flex;
+  flex: 1;
+  width: 140px;
+  height: 100px;
+  background-color: black;
+  border: 5px solid rgb(121, 220, 225);
+  border-bottom: 10px solid rgb(121, 220, 225);
+}
+
+.inner-box2 {
+  display: flex;
+  width: 55px;
+  height: 67px;
+  background-color: black;
+  justify-content: flex-start;
+}
+
+.row.row:nth-child(4) .box:first-child .inner-box1:first-child {
+  width: 145px;
+}
+
+.row.row:nth-child(4) .box:first-child .inner-box1:last-child {
+  border-bottom: 30px solid rgb(121, 220, 225);
+}
